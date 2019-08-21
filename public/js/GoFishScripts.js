@@ -6,7 +6,7 @@ client side JavaScript for pokemon go fish game
 */
 //Constants
 const backendUrl = "pokemon-go-fish.herokuapp.com";
-var HOST = backendUrl + ":3000";
+var HOST = backendUrl /*+ ":3000"*/;
 var SERVER = "https://" + HOST + "/";
 
 //global variables
