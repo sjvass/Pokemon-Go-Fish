@@ -1,0 +1,76 @@
+<!--
+Sara Vass(sjv219) and Alex James(aoj219)
+CSE264
+Final Project: Go Fish game
+Html for a pokemon themed go fish game
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Pokemon Go Fish</title>
+
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- jQuery mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel ="stylesheet" href ="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  </head>
+  <body>
+    <!-- START PAGE login-page -->
+    <div data-role="page" id="login-page">
+      <div role="main" id="main">
+          <img src="images/FishLogoLarge.png" alt="Pokemon Go Fish Logo">
+
+          <form id="login">
+            <input type="text" id="userIn" name="userIn" placeholder="Enter Username"/>
+            <input type="button" id="register" name="register" value="Register"/>
+          </form>
+      </div>
+    </div>
+    <!-- END PAGE login-page -->
+
+    <!-- START PAGE game-page -->
+    <div data-role="page" id="game-page">
+      <div id="instructions" class="popup">
+        <h2>INSTRUCTIONS:</h2>
+        <p>
+          The player who's turn it is will be highlighted in yellow.
+          A turn will continue until the player draws a card that doesn't match any cards in their hand.
+        </p>
+        <button id="instBtn">Ok</button>
+      </div>
+
+      <div id="drew-pair" class="popup">
+        <p>
+          You drew a pair! Go again!
+        </p>
+        <button id="pairBtn">Ok</button>
+      </div>
+
+      <form id="leave-game">
+        <button id="leave" type="button">leave game</button>
+      </form>
+
+      <div id="deck"></div>
+
+      <div id="player" class="hand"></div>
+
+      <div id="opponent" class="hand"></div>
+
+      <form id="leave-game">
+        <button id="submitCard" type="button">Ask</button>
+      </form>
+
+    </div>
+    <!-- END PAGE game-page -->
+
+    <!--JavaScript-->
+    <script src="https://cdn.socket.io/socket.io-1.3.4.js"></script>
+    <script src="js/GoFishScripts.js"></script>
+  </body>
+</html>

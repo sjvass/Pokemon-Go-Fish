@@ -1,0 +1,147 @@
+/*
+Sara Vass (sjv219) and Alex James(aoj219)
+CSE264
+Final Project: Go Fish Game
+CSS Style sheet for pokemon go fish game
+*/
+
+[data-role="page"] {
+  height: 100%;
+  width: 100%;
+  background-image: url('../images/underwater.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  padding: 0;
+}
+
+/*login-page*/
+#login-page form{
+  width: 75%;
+  margin-left: 12%;
+  margin-top: 15px;
+}
+
+#login-page {
+  text-align: center;
+}
+
+#login-page img {
+  max-width: 30%;
+  height: auto;
+}
+
+#login-page #main {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* game-page */
+
+.card {
+  max-height:75%;
+  width: auto;
+  display: inline-block;
+  padding: 0px;
+  border-radius: 17%;
+}
+
+.selected {
+  box-shadow: 0px 0px 10px yellow;
+}
+
+.stack {
+  position: absolute;
+  max-height: 29%;
+  width:auto;
+  max-width: 15%;
+  transform: translate(-50%, -50%);
+  border-radius: 17%;
+}
+
+#leave-game {
+  float: right;
+  margin-right: 5px;
+  margin-top: 3px;
+  padding: 0;
+}
+
+#submitCard {
+  position: absolute;
+  display: none;
+  left: 20%;
+  top: 45%;
+}
+
+#game-page button {
+  font-size: 10px;
+  width: 80px;
+  z-index: 10;
+}
+
+.hand {
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#player {
+  top: 68%;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+  text-shadow: none;
+  font-size: 65%;
+  margin-top: 0;
+  margin-bottom: 3px;
+}
+
+#opponent {
+  z-index: 5;
+  margin-top: 4px;
+}
+
+#game-page h1 {
+  font-size: 250%;
+  text-align: center;
+  z-index: 1000;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 1px Grey;
+}
+
+.popup {
+  display: none;
+  background-color: rgba(0, 0, 255, 0.7);
+  border: 1px solid white;
+  box-shadow: 2px 2px grey;
+  z-index: 1000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: none;
+}
+
+.popup p {
+  margin: 5px;
+}
+
+.popup button {
+  left: 50%;
+  transform: translateX(-50%);
+}
