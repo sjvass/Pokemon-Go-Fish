@@ -5,9 +5,9 @@ Final Project: Go Fish game
 client side JavaScript for pokemon go fish game
 */
 //Constants
-var HOST = "localhost:3000";
+var HOST = backendUrl + ":3000";
 var SERVER = "http://" + HOST + "/";
-const backendUrl = "https://go-fish-321.herokuapp.com/";
+const backendUrl = "https://pokemon-go-fish.herokuapp.com/";
 
 //global variables
 let userId = 0;
@@ -291,7 +291,7 @@ function updateCards(pList) {
   if(yourTurn) {
     $('#player h3').css("color", "yellow");
     $('#opponent h3').css("color", "white");
-  } 
+  }
   else {
     $('#opponent h3').css("color", "yellow");
     $('#player h3').css("color", "white");

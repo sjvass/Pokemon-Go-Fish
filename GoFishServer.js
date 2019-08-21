@@ -12,7 +12,7 @@ const NOT_BEING_USED = -1;
 const ERROR = -1;
 const SUCCESS = 0;
 const HOST = "127.0.0.1";
-const backendUrl = "https://sassndcrass.herokuapp.com/";
+const backendUrl = "https://pokemon-go-fish.herokuapp.com/";
 
 const url = require("url");
 const http = require("http");
@@ -93,7 +93,7 @@ var setDeck = new Deck(numberOfDecks);
 
 /*
  * Class: Hand
- * Description: The Hand object contains all the cards in player's hand. 
+ * Description: The Hand object contains all the cards in player's hand.
  */
 
 class Hand {
@@ -108,7 +108,7 @@ class Hand {
     for (var i = 0; i < 5; ++i) {
       if (setDeck["cards"].length > 0){
         hand[i] = setDeck.getCard();
-      } 
+      }
     }
     this.handcards = hand;
   };
@@ -371,9 +371,9 @@ setInterval(function(){
   }
 }, 1000);
 
-/* 
+/*
  *Function: guessingCard
- *Description: Handles client request to guess card in opponent hand 
+ *Description: Handles client request to guess card in opponent hand
  */
 function guessingCard(userId, desiredCard){
   if(setPlayers.idOnList(userId)){
@@ -433,7 +433,7 @@ function guessingCard(userId, desiredCard){
 
 /*
  * Function: processAddCard
- * Description: Processes an add card request from the client. 
+ * Description: Processes an add card request from the client.
  */
 
 function processAddCard(userId) {
@@ -456,9 +456,9 @@ function processAddCard(userId) {
               return ret;
             } else {
               if(setPlayers.getPlayer(userId).hand["handcards"].length == 0){
-                setPlayers.getPlayer(userId).hand.init();  
+                setPlayers.getPlayer(userId).hand.init();
                 //setInterval(function() {
-                  updateStatus();//}, 
+                  updateStatus();//},
                 //2000);
                 handCheck();
               }
